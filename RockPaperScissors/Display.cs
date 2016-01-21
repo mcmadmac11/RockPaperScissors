@@ -12,7 +12,11 @@ namespace RockPaperScissors
         {
             Console.WriteLine("Enter your User Name");
             string UserName = Console.ReadLine();
-            return UserName;
+            string displayUserName = UserName;
+            return displayUserName;
         }
+
+       
+
     }
 }

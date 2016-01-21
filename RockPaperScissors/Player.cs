@@ -8,15 +8,15 @@ namespace RockPaperScissors
 {
     public class Player
     {
-        string userName;
         int Score;
+        List<int> HighScore;
 
         public Player()
-        {
-
-            string UserName = userName;
+        {            
+            List<int> highScore = HighScore;
             Score = 0;
-
         }
+
+        
     }
 }

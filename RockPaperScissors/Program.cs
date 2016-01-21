@@ -10,10 +10,13 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            Player player = new Player();
-            Display display = new Display();
-            display.GetUserName();
-            Console.WriteLine(display.GetUserName());
+            new Player();
+            MyFileWriter myFileWriter = new MyFileWriter();
+            
+            
+            
+            
+            
 
         }
     }

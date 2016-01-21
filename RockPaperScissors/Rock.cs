@@ -8,5 +8,19 @@ namespace RockPaperScissors
 {
     class Rock
     {
+        public Rock()
+        {
+            if (true)
+            {
+
+            }
+
+        }
+
+        public int getRockRank()
+        {
+            int RockRank = 3;
+            return RockRank;
+        }
     }
 }
