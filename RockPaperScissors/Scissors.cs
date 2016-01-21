@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Scissors
+    public class Scissors
     {
+        public Scissors()
+        {
+            
+        }
+
     }
 }

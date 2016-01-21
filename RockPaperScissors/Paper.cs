@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Paper
+    public class Paper
     {
-        int rank = 1;
+
         public Paper()
         {
-
+            string paper = "Paper";
         }
 
-        public void getRank()
-        {
-            int Rank = rank;
-        }
     }
 }

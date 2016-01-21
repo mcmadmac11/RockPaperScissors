@@ -8,13 +8,13 @@ namespace RockPaperScissors
 {
     public class Player
     {
-        int Score;
-        List<int> HighScore;
+        string playerName;   
+        int Score = 0;
+        List<int> HighScore = new List<int>();
 
         public Player()
-        {            
-            List<int> highScore = HighScore;
-            Score = 0;
+        {           
+            Score = 0;           
         }
 
         

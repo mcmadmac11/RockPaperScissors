@@ -9,18 +9,20 @@ namespace RockPaperScissors
 {
      public class MyFileWriter
     {
-        string userName;
+        string name1;
+        string name2;
         int wins;
         int losses;
         int highScore;
-        public MyFileWriter(string userName, int wins, int losses, int highScore)
+        public MyFileWriter(string name1, string name2, int wins, int losses, int highScore)
         {
 
             TextWriter writeToFile = new StreamWriter("Rock_Paper_Scissors.txt", true);
-            writeToFile.Write("Player:{0} ");
-            writeToFile.Write("Wins: {0} Losses:{1}  ",wins.ToString(), losses.ToString());
+            writeToFile.Write("Player:{0}", name1);
+            writeToFile.Write("Player:{0}", name2);
+            writeToFile.Write("Wins: {0} Losses:{1} ",wins.ToString(), losses.ToString());
             writeToFile.WriteLine("High Score: {0}",highScore.ToString());
-            Console.WriteLine("Writing to file..." );
+            Console.WriteLine("Writing to file...");
             writeToFile.Close();
             
         }

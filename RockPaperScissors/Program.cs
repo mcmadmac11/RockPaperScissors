@@ -10,10 +10,16 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            new Player();
-            Display display = new Display();
-            display.GetUserName();
-            display.StoreUserName();
+            //Display display = new Display();
+            //display.GetPlayer1Name();
+            //display.GetPlayer2Name();
+            //display.StoreResults();
+
+            Game game = new Game();
+            Round round = new Round();
+            round.ScoreRound();
+            round.DetermineWinner();
+
             
             
             

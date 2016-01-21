@@ -12,22 +12,32 @@ namespace RockPaperScissors
         {
 
         }
-        string UserName;
-        public string GetUserName()
+        string Name1;
+        string Name2;
+        public string GetPlayer1Name()
         {
-            Console.WriteLine("Enter your User Name");
-            this.UserName = Console.ReadLine();
-            string savedUserName = UserName;
-            return savedUserName;
+            Console.WriteLine("Enter Player 1 Name");
+            this.Name1 = Console.ReadLine();
+            string Player1Name = Name1;
+            return Player1Name;
             
         }
-        
 
-        
-        public void StoreUserName()
+        public string GetPlayer2Name()
+        {
+            Console.WriteLine("Enter Player 2 Name");
+            this.Name2 = Console.ReadLine();
+            string Player2Name = Name2;
+            return Player2Name;
+
+        }
+
+
+
+        public void StoreResults()
         {
 
-            MyFileWriter writeToFile = new MyFileWriter(UserName,2,2,15);
+            MyFileWriter writeToFile = new MyFileWriter(Name1,Name2,2,2,15);
             
                           
         }

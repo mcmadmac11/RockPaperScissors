@@ -7,12 +7,23 @@ using System.IO;
 
 namespace RockPaperScissors
 {
-    class Game 
+    public class Game
     {
 
         public void StartNewGame()
         {
-   
+            Player player1 = new Player();
+            Player player2 = new Player();
+            Display display = new Display();
+            display.GetPlayer1Name();
+            display.GetPlayer2Name();
+            Console.WriteLine("New Game started");
         }
+
+
+
+
+
+
     }
 }
