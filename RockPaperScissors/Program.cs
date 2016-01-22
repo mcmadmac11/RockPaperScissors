@@ -9,16 +9,27 @@ namespace RockPaperScissors
     class Program
     {
         static void Main(string[] args)
-        {
-            //Display display = new Display();
-            //display.GetPlayer1Name();
-            //display.GetPlayer2Name();
-            //display.StoreResults();
+        { 
 
-            Game game = new Game();
-            Round round = new Round();
-            round.ScoreRound();
-            round.DetermineWinner();
+            List<int> highScore = new List<int>()
+            { 0 };
+            Display display = new Display();
+
+            string p1Name = display.player1Name;
+            string p2Name = display.player2Name;
+            Player player1 = new Player(p1Name, 0, highScore,0,0);
+            Player player2 = new Player(p2Name, 0, highScore, 0, 0);
+
+            MyFileWriter fileWriter = new MyFileWriter("Rock_Paper_Scissors.txt");
+            fileWriter.WriteToFile(player1);
+            fileWriter.WriteToFile(player2);        
+
+
+            
+            
+
+
+
 
             
             

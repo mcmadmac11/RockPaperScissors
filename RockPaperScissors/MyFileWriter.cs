@@ -7,25 +7,35 @@ using System.IO;
 
 namespace RockPaperScissors
 {
-     public class MyFileWriter
-    {
-        string name1;
-        string name2;
-        int wins;
-        int losses;
-        int highScore;
-        public MyFileWriter(string name1, string name2, int wins, int losses, int highScore)
-        {
 
-            TextWriter writeToFile = new StreamWriter("Rock_Paper_Scissors.txt", true);
-            writeToFile.Write("Player:{0}", name1);
-            writeToFile.Write("Player:{0}", name2);
-            writeToFile.Write("Wins: {0} Losses:{1} ",wins.ToString(), losses.ToString());
-            writeToFile.WriteLine("High Score: {0}",highScore.ToString());
-            Console.WriteLine("Writing to file...");
-            writeToFile.Close();
+    public class MyFileWriter
+    {
+        string path;
+        public MyFileWriter(string path)
+        {
+            this.path = path;
             
         }
+        TextWriter textWriter;
+        public void TextWriter()
+        {
+
+            textWriter.Write("Rock_Paper_Scissors.txt", true);
+        }
+
+        public void WriteToFile(Player player)
+        {
+            File.AppendAllText(this.path, string.Format(@"
+Player: {0}
+score: {1} 
+highScore: {2}
+wins: {3}
+losses: {4}
+",player.playerName, player.score, player.highScore[0].ToString(), player.wins, player.losses)); 
+
+
+        }
+
     }
 
 }

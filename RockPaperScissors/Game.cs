@@ -9,15 +9,17 @@ namespace RockPaperScissors
 {
     public class Game
     {
+        Player player1;
+        Player player2;
+
+        
 
         public void StartNewGame()
         {
-            Player player1 = new Player();
-            Player player2 = new Player();
-            Display display = new Display();
-            display.GetPlayer1Name();
-            display.GetPlayer2Name();
             Console.WriteLine("New Game started");
+            Round round = new Round();
+            round.ScoreRound();
+            round.DetermineWinner();
         }
 
 

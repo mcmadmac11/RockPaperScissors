@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class Round
+    public class Round : Game
     {
-        Player player1 = new Player();
-        Player player2 = new Player();
+        string Tie;
+        int Wins;
+        int Losses;
+        int winner;
+        Player player1;
+        Player player2;
         int Player1Selection;
         int Player2Selection;
         List<int> playerChoices = new List<int>();
@@ -17,24 +21,21 @@ namespace RockPaperScissors
 
         public List<int> ScoreRound()
         {
-            
-            
-            Console.WriteLine("{0} Turn: Please make a selection", player1);
+            Console.WriteLine("{0} Turn: Please make a selection", player1.playerName);
             Console.WriteLine(" [1] = Rock \n [2] = Paper \n [3] = Scissors");
-            Player1Selection = Convert.ToInt32(Console.ReadLine());
+            
+            Player1Selection = int.Parse(Console.ReadLine());
             playerChoices.Add(Player1Selection);
-            Console.ReadKey(true);
-            Console.WriteLine("{0} Turn: Please make a selection", player2);
+            
+            Console.WriteLine("{0} Turn: Please make a selection", player2.playerName);
             Console.WriteLine(" [1] = Rock \n [2] = Paper \n [3] = Scissors");
-            Player2Selection = Convert.ToInt32(Console.ReadLine());
+
+            Player2Selection = int.Parse(Console.ReadLine());
 
             playerChoices.Add(Player2Selection);
 
             return playerChoices;
         }
-        string Tie;
-        string Wins;
-        int winner;
 
         public string DetermineWinner()
         {

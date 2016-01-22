@@ -6,41 +6,34 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class Display 
+
+    public class Display        
     {
+
+        public string player1Name;
+        public string player2Name;
+
         public Display()
         {
-
+            GetPlayer1Name();
+            GetPlayer2Name();
         }
-        string Name1;
-        string Name2;
         public string GetPlayer1Name()
         {
             Console.WriteLine("Enter Player 1 Name");
-            this.Name1 = Console.ReadLine();
-            string Player1Name = Name1;
-            return Player1Name;
+            this.player1Name = Console.ReadLine();
+            return player1Name;
             
         }
 
         public string GetPlayer2Name()
         {
             Console.WriteLine("Enter Player 2 Name");
-            this.Name2 = Console.ReadLine();
-            string Player2Name = Name2;
-            return Player2Name;
+            this.player2Name = Console.ReadLine();
+            return player2Name;
 
         }
 
-
-
-        public void StoreResults()
-        {
-
-            MyFileWriter writeToFile = new MyFileWriter(Name1,Name2,2,2,15);
-            
-                          
-        }
 
        
 
